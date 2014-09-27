@@ -18,6 +18,9 @@
             "properties": {
                 "action": "addContent",
                 "handler": {"@": "rangeController"}
+            },
+            "_dev": {
+                "isHidden": true
             }
         },
         "button": {
@@ -26,14 +29,6 @@
                 "element": {"#": "button"},
                 "enabled": true,
                 "label": "New Task"
-            }
-        },
-        "list": {
-            "prototype": "digit/ui/list.reel",
-            "properties": {
-                "element": {"#": "list"},
-                "content": [],
-                "contentController": {"@": "rangeController"}
             },
             "listeners": [
                 {
@@ -41,6 +36,13 @@
                     "listener": {"@": "actionEventListener"}
                 }
             ]
+        },
+        "list": {
+            "prototype": "digit/ui/list.reel",
+            "properties": {
+                "element": {"#": "list"},
+                "contentController": {"@": "rangeController"}
+            }
         },
         "rangeController": {
             "prototype": "montage/core/range-controller"
